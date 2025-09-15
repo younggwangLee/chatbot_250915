@@ -34,7 +34,7 @@ else:
     # automatically at the bottom of the page.
     if prompt := st.chat_input("What is up?"):
 
-        st.session_state.messages.append([
+        st.session_state.messages.append(
             {
               "role": "system",
               "content": """
