@@ -34,7 +34,6 @@ else:
     # automatically at the bottom of the page.
     if prompt := st.chat_input("What is up?"):
 
-        # Store and display the current prompt.
         st.session_state.messages.append([
             {
               "role": "system",
@@ -45,7 +44,9 @@ else:
                 1. 법 조항 :
                 2. 의견 : 
               """
-            },{"role": "user", "content": prompt}])
+            })
+        # Store and display the current prompt.
+        st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
 
