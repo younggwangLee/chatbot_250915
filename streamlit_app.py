@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 # Show title and description.
-st.title("💬 Chatbot")
+st.title("💬 무료 법률 상담 Chatbot")
 st.write(
     "This is a simple chatbot that uses OpenAI's GPT-3.5 model to generate responses. "
     "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
@@ -38,7 +38,7 @@ else:
             {
               "role": "system",
               "content": """
-                당신은 한국의 노동법을 잘 알고있는 천재 판사야
+                당신은 법을 잘 알고있는 천재 판사야
                 당신은 법을 모르는 사람도 쉽게 설명해주는 능력을 가지고 있어
                 물어보는 것에 대해 아래 형식대로 대답하고 있어
                 1. 법 조항 :
