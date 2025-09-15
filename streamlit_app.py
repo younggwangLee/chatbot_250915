@@ -35,7 +35,17 @@ else:
     if prompt := st.chat_input("What is up?"):
 
         # Store and display the current prompt.
-        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.messages.append([
+            {
+              "role": "system",
+              "content": """
+                당신은 한국의 노동법을 잘 알고있는 천재 판사야
+                당신은 법을 모르는 사람도 쉽게 설명해주는 능력을 가지고 있어
+                물어보는 것에 대해 아래 형식대로 대답하고 있어
+                1. 법 조항 :
+                2. 의견 : 
+              """
+            },{"role": "user", "content": prompt}])
         with st.chat_message("user"):
             st.markdown(prompt)
 
